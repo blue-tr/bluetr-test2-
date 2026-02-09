@@ -9,7 +9,7 @@
   "dependencies": {
     "express": "^5.1.0",
     "axios": "^1.13.5",
-    "ejs": "^3.1.10"
+    "ejs": "^4.1.0"
   },
   "engines": {
     "node": ">=20.0.0"
