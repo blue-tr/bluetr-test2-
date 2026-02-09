@@ -1,1 +1,23 @@
-
+{
+  "name": "blue.tr",
+  "version": "1.0.0",
+  "description": "free web proxy",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "axios": "^1.13.1",
+    "ejs": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "author": "blue-tr",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blue-tr/bluetr-test1-"
+  }
+}
