@@ -3,18 +3,26 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Use Node.js 20
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js 20
       uses: actions/setup-node@v4
       with:
-        # 変数を使わず、直接「20」と指定します
         node-version: '20'
-        
-    - run: npm install
+
+    - name: Install dependencies
+      # package-lock.jsonがなくてもエラーにならない魔法のコマンド
+      run: npm install
+
+    - name: Check version
+      # 正常にインストールされたか確認
+      run: node -v && npm -v
