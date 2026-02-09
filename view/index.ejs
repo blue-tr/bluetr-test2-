@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>簡的プロキシのテスト</title>
+  <link rel="stylesheet" href="/css/style.css"> </head>
+<body>
 
+  <div id="title">
+    <h1>簡的プロキシのテスト</h1>
+    <h2>Node.js + Vercel版にアップグレード済み</h2>
+  </div>
+
+  <div id="bar" class="center">
+    <input id="url" type="text" placeholder="https://example.com">
+    <button id="loadBtn">読み込み</button>
+  </div>
+
+  <div id="bg"></div>
+  <iframe id="view"></iframe>
+
+  <script src="public/ui.js" defer></script>
+  <script src="public/proxy.js" defer></script>
+</body>
+</html>
