@@ -1,10 +1,17 @@
 async function loadPage(url) {
   try {
-    // サーバー側の /api/proxy にリクエストを投げる
-    const res = await fetch("/api/proxy?url=" + encodeURIComponent(url));
-    const html = await res.text();
+    // POST リクエストでサーバーに送信
+    const res = await fetch("/api/proxy", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url })
+    });
     
-    // iframeに流し込む
+    if (!res.ok) {
+      throw new Error(`HTTP Error: ${res.status}`);
+    }
+    
+    const html = await res.text();
     document.getElementById("view").srcdoc = html;
   } catch (e) {
     console.error("Fetch Error:", e);
