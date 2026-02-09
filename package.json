@@ -1,23 +1,21 @@
 {
-  "name": "blue.tr",
+  "name": "bluetr-test2",
   "version": "1.0.0",
-  "description": "free web proxy",
+  "description": "free web proxy study project",
   "main": "api/index.js",
+  "type": "commonjs",
   "scripts": {
-    "start": "node api/index.js"
+    "start": "node api/index.js",
+    "dev": "node api/index.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "axios": "^1.13.5",
-    "ejs": "^4.1.0"
+    "express": "^5.0.0",
+    "axios": "^1.6.0",
+    "ejs": "^3.1.9"
   },
   "engines": {
     "node": ">=20.0.0"
   },
   "author": "blue-tr",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/blue-tr/bluetr-test2-"
-  }
+  "license": "MIT"
 }
