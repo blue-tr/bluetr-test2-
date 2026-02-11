@@ -1,7 +1,7 @@
 async function loadPage(url) {
   try {
     // POST リクエストでサーバーに送信
-    const res = await fetch("/api/proxy", {
+    const res = await fetch("/api/index.js", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url })
