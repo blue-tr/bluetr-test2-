@@ -1,3 +1,5 @@
+"use strict";
+
 async function loadPage(url) {
   try {
     // POST リクエストでサーバーに送信
