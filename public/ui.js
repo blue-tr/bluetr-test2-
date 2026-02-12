@@ -1,3 +1,5 @@
+"use strict";
+
 const bar = document.getElementById("bar");
 const title = document.getElementById("title");
 const bg = document.getElementById("bg");
